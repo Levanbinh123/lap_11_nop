@@ -8,11 +8,13 @@ public class Login {
 
    WebDriver driver;
 
-   @BeforeMethod
-   public void setup() {
-       driver =DriverFactory.createDriver();
-       driver.get("https://www.google.com");
-   }
+@BeforeMethod
+@Parameters("browser")
+public void setup(@Optional("chrome") String browser) {
+driver = DriverFactory.createDriver(browser);
+driver.get("https://www.google.com"); // THÊM DÒNG NÀY
+}
+
 
    @Test
    public void testTitle() {
