@@ -19,7 +19,7 @@ driver.get("https://www.google.com"); // THÊM DÒNG NÀY
    @Test
    public void testTitle() {
        String title = driver.getTitle();
-       Assert.assertTrue(title.contains("Googlesss"));
+       Assert.assertTrue(title.contains("Google"));
    }
 
    @AfterMethod
