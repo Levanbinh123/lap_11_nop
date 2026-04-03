@@ -1,2 +1,3 @@
 com\example\lam_lap11\Lam_lap11.class
+utils\ConfigUtil.class
 utils\DriverFactory.class
