@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>lam_lap11</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>23</maven.compiler.release>
+        <exec.mainClass>com.example.lam_lap11.Lam_lap11</exec.mainClass>
+    </properties>
+    <dependencies>
+
+   <!-- Selenium -->
+   <dependency>
+       <groupId>org.seleniumhq.selenium</groupId>
+       <artifactId>selenium-java</artifactId>
+       <version>4.20.0</version>
+   </dependency>
+
+   <!-- WebDriverManager -->
+   <dependency>
+       <groupId>io.github.bonigarcia</groupId>
+       <artifactId>webdrivermanager</artifactId>
+       <version>5.8.0</version>
+   </dependency>
+
+   <!-- TestNG -->
+   <dependency>
+       <groupId>org.testng</groupId>
+       <artifactId>testng</artifactId>
+       <version>7.10.2</version>
+       <scope>test</scope>
+   </dependency>
+
+</dependencies>
+<build>
+   <plugins>
+
+       <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-surefire-plugin</artifactId>
+           <version>3.2.5</version>
+           <configuration>
+               <suiteXmlFiles>
+                   <suiteXmlFile>testng-smoke.xml</suiteXmlFile>
+               </suiteXmlFiles>
+           </configuration>
+       </plugin>
+
+   </plugins>
+</build>
+
+</project>
